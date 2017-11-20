@@ -36,7 +36,7 @@ class Utils(object):
 
             #Add additional type to obj object class from extendAttributes parameter.
             if extendAttributes != None:
-                for key, value in extendAttributes.iteritems():
+                for key, value in six.iteritems(extendAttributes):
                     if key not in obj.types and key in json_dump:
                         obj.types.update({key:value})
 
